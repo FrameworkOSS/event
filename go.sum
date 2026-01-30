@@ -1,9 +1,5 @@
-github.com/FrameworkOSS/feature v0.0.0-20260128071052-f1694f41fa9f h1:HrhX2Wsj0buDgYePvWzYIbqdL+GtJHQoJcFSfUnQExs=
-github.com/FrameworkOSS/feature v0.0.0-20260128071052-f1694f41fa9f/go.mod h1:9RphPNy82RCnVM0rvSFzichIfjvS1tqH54yeIur9GZg=
-github.com/FrameworkOSS/feature_wires v0.0.0-20260128071659-fcec70e8e0ec h1:1Z8L5n8Crk6V5U99U3z1TNOxPAFj0i/km+MpNTnpIEY=
-github.com/FrameworkOSS/feature_wires v0.0.0-20260128071659-fcec70e8e0ec/go.mod h1:raDsFwoI5/RJmOFUmcmHIa162MAuuwAGxdEDAu6J3yQ=
-github.com/FrameworkOSS/portal v0.0.0-20260128064008-86f8a0104e4d h1:CjPmUDTYLosI4QMDXbzlAKGv6kgPwz8/HgFxLSCG7r4=
-github.com/FrameworkOSS/portal v0.0.0-20260128064008-86f8a0104e4d/go.mod h1:IfeRYR2FUMmnnrdyrTePXWa77sEVICG5LaEpafLRUmI=
+github.com/FrameworkOSS/feature_wires v0.0.0-20260130024520-038048c88f6d h1:ZmQb2lbaAp9gc8XtwT3NctoWq8mRssEthLn63uTw8tI=
+github.com/FrameworkOSS/feature_wires v0.0.0-20260130024520-038048c88f6d/go.mod h1:Y12HTdYkOZpI669AJlfk7XzEQRmjJdM4dH/AkB/xZGI=
 github.com/JoshuaDoes/crunchio v0.0.4 h1:gHMvTT0rHCITPjhfxZ0huykyAUBnP94xzExyhnHcBCM=
 github.com/JoshuaDoes/crunchio v0.0.4/go.mod h1:Zk8lv1MlNNb5WpMcNSr8uBgleoE5G3PpXi6MD3JImOA=
 github.com/google/go-cmp v0.5.6 h1:BKbKCqvP6I+rmFHt06ZmyQtvB8xAkWdhFyr0ZUNZcxQ=
