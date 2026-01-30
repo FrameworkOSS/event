@@ -9,13 +9,13 @@ import (
 )
 
 const (
-	EVENT_BATCH    = "\x01"
-	EVENT_BIND     = "\x02"
-	EVENT_ERROR    = "\x03"
-	EVENT_EXIT     = "\x04"
-	EVENT_READY    = "\x05"
-	EVENT_RESPONSE = "\x06"
-	EVENT_SUCCESS  = "\x07"
+	EVENT_BATCH    = "BA"
+	EVENT_BIND     = "B"
+	EVENT_ERROR    = "E"
+	EVENT_EXIT     = "X"
+	EVENT_READY    = "R"
+	EVENT_RESPONSE = "RE"
+	EVENT_SUCCESS  = "S"
 )
 
 func NewEvent() *Event {
