@@ -328,3 +328,18 @@ func (e *Event) SetEpochMilliNow() *Event {
 	e.epochMilli = uint64(time.Now().UnixMilli())
 	return e
 }
+
+/*	---
+	--- HELPERS ---
+	---
+*/
+
+func (e *Event) ForEachArgument(method func(arg []byte) error) error {
+	offsets := e.GetOffsets()
+	for i := 0; i < len(offsets); i++ {
+		if err := method(e.GetArgument(i)); err != nil {
+			return err
+		}
+	}
+	return nil
+}
