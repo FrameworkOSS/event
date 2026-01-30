@@ -27,6 +27,68 @@ const (
 	EVENT_FEATURE_CLOSE  = "\x0E"
 )
 
+func Key(s string) string {
+	switch s {
+	case EVENT_BATCH:
+		return "batch"
+	case "batch":
+		return EVENT_BATCH
+	case EVENT_BIND:
+		return "bind"
+	case "bind":
+		return EVENT_BIND
+	case EVENT_ERROR:
+		return "error"
+	case "error":
+		return EVENT_ERROR
+	case EVENT_EXIT:
+		return "exit"
+	case "exit":
+		return EVENT_EXIT
+	case EVENT_READY:
+		return "ready"
+	case "ready":
+		return EVENT_READY
+	case EVENT_RESPONSE:
+		return "resp"
+	case "resp":
+		return EVENT_RESPONSE
+	case EVENT_SUCCESS:
+		return "success"
+	case "success":
+		return EVENT_SUCCESS
+	case EVENT_CHANNEL_ADD:
+		return "channel_add"
+	case "channel_add":
+		return EVENT_CHANNEL_ADD
+	case EVENT_CHANNEL_REMOVE:
+		return "channel_remove"
+	case "channel_remove":
+		return EVENT_CHANNEL_REMOVE
+	case EVENT_FEATURE_LIST:
+		return "feature_list"
+	case "feature_list":
+		return EVENT_FEATURE_LIST
+	case EVENT_FEATURE_ADD:
+		return "feature_add"
+	case "feature_add":
+		return EVENT_FEATURE_ADD
+	case EVENT_FEATURE_REMOVE:
+		return "feature_remove"
+	case "feature_remove":
+		return EVENT_FEATURE_REMOVE
+	case EVENT_FEATURE_OPEN:
+		return "feature_open"
+	case "feature_open":
+		return EVENT_FEATURE_OPEN
+	case EVENT_FEATURE_CLOSE:
+		return "feature_close"
+	case "feature_close":
+		return EVENT_FEATURE_CLOSE
+	}
+	return s
+}
+
 func NewEvent() *Event {
 	e := new(Event)
 	e.SetEpochMilliNow()
