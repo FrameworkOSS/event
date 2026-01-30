@@ -9,13 +9,22 @@ import (
 )
 
 const (
-	EVENT_BATCH    = "BA"
-	EVENT_BIND     = "B"
-	EVENT_ERROR    = "E"
-	EVENT_EXIT     = "X"
-	EVENT_READY    = "R"
-	EVENT_RESPONSE = "RE"
-	EVENT_SUCCESS  = "S"
+	EVENT_BATCH    = "\x01"
+	EVENT_BIND     = "\x02"
+	EVENT_ERROR    = "\x03"
+	EVENT_EXIT     = "\x04"
+	EVENT_READY    = "\x05"
+	EVENT_RESPONSE = "\x06"
+	EVENT_SUCCESS  = "\x07"
+
+	EVENT_CHANNEL_ADD    = "\x08"
+	EVENT_CHANNEL_REMOVE = "\x09"
+
+	EVENT_FEATURE_LIST   = "\x0A"
+	EVENT_FEATURE_ADD    = "\x0B"
+	EVENT_FEATURE_REMOVE = "\x0C"
+	EVENT_FEATURE_OPEN   = "\x0D"
+	EVENT_FEATURE_CLOSE  = "\x0E"
 )
 
 func NewEvent() *Event {
