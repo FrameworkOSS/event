@@ -5,6 +5,9 @@ type EventHandlerMethod func(e *Event) error
 type EventHandler struct {
 	handlerDefault EventHandlerMethod
 	handlers       map[string]EventHandlerMethod
+
+	oneshotDefault EventHandlerMethod
+	handlersOnce   map[string]EventHandlerMethod
 }
 
 func NewEventHandler() (eh *EventHandler) {
@@ -40,6 +43,15 @@ func (eh *EventHandler) Handle(method EventHandlerMethod, eventID ...string) *Ev
 		eh.handlerDefault = method
 	}
 	return eh
+}
+
+// Oneshot returns a wrapper over the given method that will unregister itself after being processed once.
+func (eh *EventHandler) Oneshot(method EventHandlerMethod) EventHandlerMethod {
+	return func(e *Event) error {
+		err := method(e)
+		eh.Unhandle(e.GetID())
+		return err
+	}
 }
 
 // Unhandle removes one or more handlers. Specifying no event IDs will remove the default event handler.
