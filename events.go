@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/FrameworkOSS/feature_wires/wire"
+	"github.com/FrameworkOSS/wire"
 	"github.com/JoshuaDoes/crunchio"
 )
 
