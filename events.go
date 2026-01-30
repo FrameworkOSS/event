@@ -4,7 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/FrameworkOSS/portal/features/wires/wire"
+	"github.com/FrameworkOSS/feature"
+	"github.com/FrameworkOSS/feature_wires/wire"
 	"github.com/JoshuaDoes/crunchio"
 )
 
@@ -76,14 +77,14 @@ func NewEventError(feature string, err error) *Event {
 		SetData([]byte(err.Error()))
 }
 
-func NewEventFeatureBinding(feature string, features ...Feature) (e *Event) {
+func NewEventFeatureBinding(f string, features ...feature.Feature) (e *Event) {
 	e = NewEvent().
 		SetID("bind").
-		SetProducer(feature)
+		SetProducer(f)
 
 	for i := 0; i < len(features); i++ {
 		e.AddOffsetNext()
-		e.AddDataNext(NewFeatureBinding(features[i]).Bytes())
+		e.AddDataNext(feature.NewFeatureBinding(features[i]).Bytes())
 	}
 
 	return
