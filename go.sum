@@ -1,5 +1,5 @@
-github.com/FrameworkOSS/feature_wires v0.0.0-20260130024520-038048c88f6d h1:ZmQb2lbaAp9gc8XtwT3NctoWq8mRssEthLn63uTw8tI=
-github.com/FrameworkOSS/feature_wires v0.0.0-20260130024520-038048c88f6d/go.mod h1:Y12HTdYkOZpI669AJlfk7XzEQRmjJdM4dH/AkB/xZGI=
+github.com/FrameworkOSS/feature_wires v0.0.0-20260130030430-bb17c84ca0c6 h1:HJAAoFELQ90GQXLTMz9Ff4mqqThdvp87MCRGVafLw1E=
+github.com/FrameworkOSS/feature_wires v0.0.0-20260130030430-bb17c84ca0c6/go.mod h1:R5iHWSSWCc9KZJsDThDOnIcpMdI5smR+GPKsEqq/S4I=
 github.com/JoshuaDoes/crunchio v0.0.4 h1:gHMvTT0rHCITPjhfxZ0huykyAUBnP94xzExyhnHcBCM=
 github.com/JoshuaDoes/crunchio v0.0.4/go.mod h1:Zk8lv1MlNNb5WpMcNSr8uBgleoE5G3PpXi6MD3JImOA=
 github.com/google/go-cmp v0.5.6 h1:BKbKCqvP6I+rmFHt06ZmyQtvB8xAkWdhFyr0ZUNZcxQ=
