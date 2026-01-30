@@ -8,6 +8,16 @@ import (
 	"github.com/JoshuaDoes/crunchio"
 )
 
+const (
+	EVENT_BATCH    = "\x01"
+	EVENT_BIND     = "\x02"
+	EVENT_ERROR    = "\x03"
+	EVENT_EXIT     = "\x04"
+	EVENT_READY    = "\x05"
+	EVENT_RESPONSE = "\x06"
+	EVENT_SUCCESS  = "\x07"
+)
+
 func NewEvent() *Event {
 	e := new(Event)
 	e.SetEpochMilliNow()
@@ -21,20 +31,20 @@ func NewEvent() *Event {
 
 func NewEventSuccess(feature string) *Event {
 	return NewEvent().
-		SetID("success").
+		SetID(EVENT_SUCCESS).
 		SetProducer(feature)
 }
 
 func NewEventResponse(feature string, data []byte) *Event {
 	return NewEvent().
-		SetID("resp").
+		SetID(EVENT_RESPONSE).
 		SetProducer(feature).
 		SetData(data)
 }
 
 func NewEventBatch(feature string, events ...*Event) (e *Event) {
 	e = NewEvent().
-		SetID("batch").
+		SetID(EVENT_BATCH).
 		SetProducer(feature)
 
 	offsets := make([]uint64, len(events))
@@ -56,7 +66,7 @@ func NewEventBatch(feature string, events ...*Event) (e *Event) {
 
 func NewEventReady(feature string, ready bool) (e *Event) {
 	e = NewEvent().
-		SetID("ready").
+		SetID(EVENT_READY).
 		SetProducer(feature)
 
 	if ready {
@@ -71,7 +81,7 @@ func NewEventReady(feature string, ready bool) (e *Event) {
 
 func NewEventError(feature string, err error) *Event {
 	return NewEvent().
-		SetID("error").
+		SetID(EVENT_ERROR).
 		SetProducer(feature).
 		SetData([]byte(err.Error()))
 }
